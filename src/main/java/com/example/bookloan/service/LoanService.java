@@ -1,6 +1,7 @@
 package com.example.bookloan.service;
 
 import java.time.LocalDate;
+import java.util.List;
 
 import org.springframework.stereotype.Service;
 
@@ -29,5 +30,10 @@ public class LoanService {
 
         Loan loan = new Loan(user, book, LocalDate.now());
         return loanRepo.save(loan);
+    }
+
+    //Liste de tous les emprunts
+    public List<Loan> getAllLoans() {
+        return loanRepo.findAll();
     }
 }
