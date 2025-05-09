@@ -22,7 +22,7 @@ public class UserService {
     }
 
     //afficher la liste des utilisateurs
-    public List<User> getAllUser(){
+    public List<User> getAllUsers(){
         return userRepository.findAll();
     }
 
